@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark navbar-custom">
+  <div class="container-fluid">
+    <%= link_to root_path do %>
+      <%= image_tag "hvk_logo.png", class: "navbar_logo" %>
+      <%= image_tag "hvk_logo_banner.png", class: "navbar_text" %>
+    <% end %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse navbar-button" id="navbarTogglerDemo02">
+      <div class="d-flex">
+        <% if user_signed_in? %>
+          <%= link_to 'Logout', destroy_user_session_path, class: "btn btn-danger btn-sm", method: :delete %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</nav>

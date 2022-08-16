@@ -7,3 +7,5 @@ view their dashboard and so on.
 
 Aug 16, 2022 : 
   As of today, users can create an account and login. The dashboard is still in progress. Currently working on the design of the website. 
+
+NOTE: If you are an employer and are looking at the timeline of how long it took me to create this website, please keep in mind that I was juggling this project along with a full time job, going to the gym, wedding planning, and other obligations :) 

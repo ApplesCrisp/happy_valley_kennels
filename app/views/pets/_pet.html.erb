@@ -1,0 +1,40 @@
+<div id="<%= dom_id pet %>">
+  <p>
+    <strong>Name:</strong>
+    <%= pet.name %>
+  </p>
+
+  <p>
+    <strong>Breed:</strong>
+    <%= pet.breed %>
+  </p>
+
+  <p>
+    <strong>Colors:</strong>
+    <%= pet.colors %>
+  </p>
+
+  <p>
+    <strong>Age:</strong>
+    <%= pet.age %>
+  </p>
+
+  <p>
+    <strong>Neutered spayed:</strong>
+    <%= pet.neutered_spayed %>
+  </p>
+
+  <p>
+    <strong>Sex:</strong>
+    <%= pet.sex %>
+  </p>
+
+  <p>
+    <strong>Vaccinated:</strong>
+    <%= pet.vaccinated %>
+  </p>
+
+  <%= image_tag(pet.pet_picture) %>
+  <%= pet.pictures %>
+
+</div>

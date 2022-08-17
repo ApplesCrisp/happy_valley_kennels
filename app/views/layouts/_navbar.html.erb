@@ -1,18 +1,31 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark navbar-custom">
-  <div class="container-fluid">
-    <%= link_to root_path do %>
-      <%= image_tag "hvk_logo.png", class: "navbar_logo" %>
-      <%= image_tag "hvk_logo_banner.png", class: "navbar_text" %>
-    <% end %>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse navbar-button" id="navbarTogglerDemo02">
-      <div class="d-flex">
-        <% if user_signed_in? %>
-          <%= link_to 'Logout', destroy_user_session_path, class: "btn btn-danger btn-sm", method: :delete %>
-        <% end %>
-      </div>
+<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light navbar-custom">
+  <%= link_to root_path do %>
+    <%= image_tag "hvk_logo_banner.png", class: "navbar_logo navbar-brand" %>
+  <% end %>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarhamburger" aria-controls="navbarhamburger" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarhamburger">
+    <div class="container-fluid col-lg-10">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link link_navbar link_common" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link link_navbar link_common" href="#">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link link_navbar link_common" href="#">Boarding</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link link_navbar link_common" href="#">Daycare</a>
+      </li>
+    </ul>
+    </div>
+    <div class="d-flex navbar-button col-lg-2">
+      <% if user_signed_in? %>
+        <%= link_to 'Logout', destroy_user_session_path, class: "btn btn-danger btn-sm", method: :delete %>
+      <% end %>
     </div>
   </div>
 </nav>

@@ -1,0 +1,29 @@
+.navbar {
+    z-index: 1;
+    border-bottom: 1px solid #002F2F;
+}
+
+.navbar-button {
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+}
+
+.navbar-custom {
+    background-color: #fff !important;
+
+}
+
+.nav-item {
+    margin-left: 10%;
+}
+
+.navbar_logo {
+    height: 80px;
+    width: 240px;
+}
+
+.navbar_text {
+    height: 80px;
+    width: 150px;
+}

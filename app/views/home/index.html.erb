@@ -1,24 +1,17 @@
 <section id="home" class ="splash_page content-container">
   <div id="home_wrapper" class="row">
-    <div id="home_signin" class="col-lg-7 container-fluid div_padding">
-      <h1>Welcome to Happpy Valley Kennels</h1>
+    <div id="welcome" class="col-lg-7 container-fluid div_padding">
+      <h1>Welcome to Happpy Valley Kennel</h1>
+      <h3 class="slogan">Where Every Day's a Dog Day</h3>
     </div>
     <div
       class="col-lg-5 container-fluid center_content div_padding dark_background_div half_border_radius_right"
     >
-      <%= image_tag "hvk_logo.png", class: "simple_logo" %>
+      <%= image_tag "hvk_logo_alt.png", class: "simple_logo" %>
       <br/>
-      <%= link_to "Sign In", user_session_path, class: "btn btn-primary btn-lg" %>
+      <%= link_to "Sign In", user_session_path, class: "btn btn-primary btn-lg cool_beans_common cool_beans_style_primary" %>
       <br/>
-      <h3>New Here?</h3>
-      <%= link_to "Create Account", new_user_registration_path, class: "btn btn-primary btn-sm" %>
+      <%= link_to "Create Account", new_user_registration_path, class: "link_forms link_common" %>
     </div>
   </div>
 </section>
-<section id="about" class="content-container">
-  <h1>Welcome to Happy Valley Kennels</h1>
-  <p>Here at HVK, we pride ourselves in offering the best possible care for your
-    pups.
-  </p>
-</section>
-<%= render "devise/shared/links" %>

@@ -10,10 +10,15 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
-
+@import url("https://use.typekit.net/axz2hml.css");
 
 // App sections
-@import "./custom";
+@import "./common";
+@import "application/navbar";
+@import "application/buttons_links";
+@import "application/forms";
+@import "application/dashboard";
+@import "application/sign_in";
 @import "application/breadcrumb";
 @import "application/header";
 

@@ -1,0 +1,47 @@
+#dashboard_wrapper {
+    width: 100%;
+}
+
+#vertical_strip {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    background-color:#9DBDC6;
+    height:100%;  
+    z-index: 0; 
+}
+
+#dashboard_wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #FAFAFA;
+    z-index: 1;
+}
+
+.profile {
+    background-color: rgba(4, 99, 128, 1);
+    margin-left: 90px;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.update_profile {
+    text-align: center;
+    color: white !important;
+}
+
+hr {
+    margin: 1rem 0;
+    color: #FFF;
+    border: 0;
+    border-top: 1px solid;
+    opacity: 1;
+    width: 100%;
+}
+
+.update_profile_msg{
+    margin-bottom: -4px;
+    margin-top: 10px;
+}

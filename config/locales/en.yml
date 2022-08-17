@@ -45,12 +45,8 @@ en:
       models:
         user:
           attributes:
-            choises:
-              blacklist: First item is forbidden.
-            fruit:
-              blacklist: Apple is forbidden.
-            music:
-              blacklist: Rock is forbidden.
+            phone: 
+              blank: "number can't be blank"
   helpers:
     submit:
       owner:
@@ -59,27 +55,9 @@ en:
     labels:
       user:
         email: Email
-        first_kiss: First kiss
     hints:
-      user:
-        name: Text input example
-        email: We'll never share your email with anyone else.
-        password: Password input example
-        avatar: File input example
-        bio: Textarea input example
-        birthday: Date multi select example
-        color: Collection as inline radio buttons example
-        fruit: Collection as inline check boxes example
-        music: Collection multiple select example
-        language: Collection select example
-        pill: Collection as radio buttons example
-        choises: Collection as check boxes example
-        friends: Integer input example
-        mood: Integer range example
-        awake: Time multi select example
-        first_kiss: Datetime multi select example
-        active: Boolean as radio button example
-        terms: Boolean as check box example
+      password: 
+
     options:
       user:
         province:
@@ -98,13 +76,13 @@ en:
         province: Select your Province
     placeholders:
       user:
-        firstname: First Name
+        name: Name
         lastname: Last Name
         address: Address
         city: City
         province: Province
         postalcode: Postal Code
-        phonenumber: Phone Number
+        phone: Phone Number
         email: Enter email
         password: Password
         password_confirmation: Password Confirmation

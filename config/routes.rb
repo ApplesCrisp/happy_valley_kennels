@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :pets
   get 'home/index'
   get 'home/dashboard'
   devise_for :users

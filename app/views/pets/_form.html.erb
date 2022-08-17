@@ -1,0 +1,26 @@
+
+<%= simple_form_for(@pet) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :breed %>
+    <%= f.input :colors %>
+    <%= f.input :age %>
+    <%= f.input :neutered_spayed %>
+    <%= f.input :sex %>
+    <%= f.input :vaccinated %>
+  </div>
+
+  <div>
+    <%= f.label :pet_picture %>
+    <%= f.file_field :pet_picture %>
+  </div>
+  <div>
+    <%= f.label :pictures %>
+    <%= f.file_field :pictures, multiple: true %>
+  </div>  
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

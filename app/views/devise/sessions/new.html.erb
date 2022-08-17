@@ -1,7 +1,7 @@
-<div class="splash_page content-container">
-  <div class="center_content div_padding dark_background_div border_radius">
-    <%= image_tag "hvk_logo.png", class: "simple_logo" %>
+<div class="content-container">
+  <div class="sign_in_div div_padding dark_background_div border_radius col-sm-10 col-lg-7 col-xl-3">
     <h1>Sign In</h1>
+    <hr/>
     <%= simple_form_for(:user, url: session_path(:user), wrapper: :floating_labels_form) do |f| %>
       <%= f.input :email,
                 required: false,
@@ -12,7 +12,9 @@
                 input_html: { autocomplete: "current-password" } %>
       <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       <div class="center_content">
-        <%= f.button :submit, "Sign In", class: "btn btn-lg btn-primary" %>
+        <%= f.button :button, "Sign In", type: :submit, class: "btn btn-lg btn-primary cool_beans_common cool_beans_style_primary sign_in_button" %>
+        <br/>
+        <%= link_to "Create Account", new_user_registration_path, class: "link_forms link_common" %>
       </div>
     <% end %>
   </div>

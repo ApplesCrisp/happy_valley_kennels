@@ -1,0 +1,17 @@
+@import "./common.scss";
+
+.ui-state-active a {
+    @extend .orange-background;
+}
+
+.ui-widget-header {
+    @extend .blue-background;
+}
+
+.ui-widget a {
+    @extend .header-font-family;
+}
+
+.ui-widget {
+    @extend .main-text-font-family;
+}

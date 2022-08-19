@@ -1,5 +1,5 @@
-<div class="content-container content_container_create_user">
-  <div class="sign_in_div div_padding dark_background_div border_radius col-sm-10 col-lg-7 col-xl-8">
+<div class="content-container content-container-create-user">
+  <div class="sign-in-div div-padding dark-background-div border-radius col-sm-10 col-lg-7 col-xl-8">
     <h1>Sign up</h1>
     <hr/>
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), wrapper: :floating_labels_form) do |f| %>
@@ -55,10 +55,10 @@
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
       </div>
-      <div class="center_content">
-        <%= f.button :button, "Sign Up", type: :submit, class: "btn btn-lg btn-primary cool_beans_common cool_beans_style_primary sign_in_button" %>
+      <div class="center-content">
+        <%= f.button :button, "Sign Up", type: :submit, class: "btn btn-lg btn-primary cool-beans-common cool-beans-style-primary sign-in-button" %>
         <br/>
-        <%= link_to "Sign In", user_session_path, class: "link_forms link_common" %>
+        <%= link_to "Sign In", user_session_path, class: "link-forms link-common" %>
       </div>
     <% end %>
   </div>

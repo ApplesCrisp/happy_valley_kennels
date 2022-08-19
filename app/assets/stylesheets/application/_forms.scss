@@ -1,10 +1,12 @@
+@import "./common.scss";
+
 .form-text,
 .form-check {
-    color: #FFFFFF;
+    @extend .white-color;
 }
 
 .form-floating {
-    font-family: cooper-black-std, serif;
+    @extend .header-font-family;
     font-style: italic;
     font-weight: 100;
 }

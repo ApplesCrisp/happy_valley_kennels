@@ -1,34 +1,14 @@
-.sign_in_div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+@import "./common.scss";
+
+.sign-in-div {
+    @extend .center-content;
     box-shadow: 4px 5px 20px black;
     padding: 25px !important;
 }
 
-.sign_in_button {
+.sign-in-button {
     width: 100%;
     font-size: 2em;
 }
 
-.paw_prints {
-    position:fixed;
-    top: 110px;
-    left: 0;
-    z-index: 0;
-}
-
-.prints{
-    height: 200px;
-    width: 200px;
-}
-
-.dog_sideways_div {
-    overflow: visible;
-}
-
-.content_container_create_user {
-    justify-content: flex-start !important;
-    padding: 30px !important;
-}
 

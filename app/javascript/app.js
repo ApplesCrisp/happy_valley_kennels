@@ -1,15 +1,18 @@
 // Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
 import "controllers"
 import * as bootstrap from "bootstrap"
-
+import "./src/add_jquery"
+import "jquery-ui-dist"
+import "jqtree"
 // required opt-in - initialize tooltips
 // https://getbootstrap.com/docs/5.1/components/tooltips/#example-enable-tooltips-everywhere
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
 });
-
-
+$( function() {
+  $( "#tabs" ).tabs();
+} );
 // https://getbootstrap.com/docs/5.1/forms/validation/#custom-styles
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {

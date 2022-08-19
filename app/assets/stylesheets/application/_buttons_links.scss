@@ -1,26 +1,12 @@
-a:link {
-    text-decoration: none;
-}
+@import "./common.scss";
 
-
-a:visited {
-    text-decoration: none;
-}
-
-
-a:hover {
-    text-decoration: none;
-}
-
-
-a:active {
+a:link, a:visited, a:hover, a:active{
     text-decoration: none;
 }
 
 /********************* BUTTONS *********************/
-
-.cool_beans_common {
-    font-family: amatic-sc, sans-serif;
+.cool-beans-common {
+    @extend .link-font-family;
     overflow: hidden;
     position: relative;
     text-decoration: none;
@@ -29,7 +15,7 @@ a:active {
     z-index: 0;
 }
 
-.cool_beans_common::after {
+.cool-beans-common::after {
     display: block;
     height: 100%;
     width: 100%;
@@ -44,73 +30,77 @@ a:active {
     content: '';
 }
 
-.cool_beans_common:hover::after {
+.cool-beans-common:hover::after {
     transform: translate(0, 0);
 }
 
-.cool_beans_style_primary {
+.cool-beans-style-primary {
+    @extend .cool-beans-common;
+    @extend .white-background;
+    @extend .blue-color;
     border: 2px solid #FFFFFF;
-    color: #002F2F;
-    background-color: #FFFFFF !important;
     font-size: 3em;
 }
 
-.cool_beans_style_primary::after {
-    background-color: #F24405;
+.cool-beans-style-primary::after {
+    @extend .orange-background;
 }
-.cool_beans_style_primary:hover {
+.cool-beans-style-primary:hover {
+    @extend .white-color;
     border: 2px solid transparent;
-    color: #FFFFFF;
     transform: scale(1.02);
     will-change: transform;
 }
 
-.cool_beans_style_secondary {
+.cool-beans-style-secondary {
+    @extend .cool-beans-common;
+    @extend .white-background;
+    @extend .blue-color;
     border: 2px solid #FFFFFF;
-    color: #002F2F;
-    background-color: #FFFFFF !important;
     font-size: 2em;
 }
 
-.cool_beans_style_secondary::after {
-    background-color: #046380;
+.cool-beans-style-secondary::after {
+    @extend .blue-background;
 }
 
-.cool_beans_style_secondary:hover {
+.cool-beans-style-secondary:hover {
     border: 2px solid transparent;
-    color: #FFFFFF;
+    @extend .white-color;
     transform: scale(1.02);
     will-change: transform;
 }
 
 /********************* SECONDARY LINKS *********************/
-.link_common {
-    font-family: amatic-sc, sans-serif;
+.link-common {
+    @extend .link-font-family;
     font-weight: 400;
     font-style: normal;
     position: relative;
     text-decoration: none;
 }
 
-.link_navbar {
-    color: #002F2F !important;
+.link-navbar {
+    @extend .link-common;
+    @extend .blue-color;
     font-size: 2em;
     padding-bottom: 0px;
 }
 
-.link_forms {
-    color: #FFFFFF !important;
+.link-forms {
+    @extend .link-common;
+    @extend .white-color;
     font-size: 2em;
     padding-bottom: 0px;
 }
 
-.link_common::before {
+.link-common::before {
     content: '';
+    @extend .orange-background;
     position: absolute;
     width: 100%;
     height: 2px;
     border-radius: 2px;
-    background-color: #F24405;
     bottom: 0;
     left: 0;
     transform-origin: right;
@@ -118,7 +108,7 @@ a:active {
     transition: transform .3s ease-in-out;
 }
 
-.link_common:hover::before {
+.link-common:hover::before {
     transform-origin: left;
     transform: scaleX(1);
 }

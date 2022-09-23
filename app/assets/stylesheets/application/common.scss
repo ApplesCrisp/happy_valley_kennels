@@ -5,7 +5,7 @@
 }
 
 body {
-    @extend .link-font-family;
+    @extend .main-text-font-family;
     line-height: 1.6;
     margin: 0;
     background-image: url(asset-path('hvk_pattern.png'));
@@ -13,6 +13,19 @@ body {
     background-position: center;
     height: calc(100vh - 97px);
     background-color: white;
+}
+
+p {
+    font-size: large;
+}
+
+hr {
+    @extend .white-color;
+    margin: 1rem 0;
+    border: 0;
+    border-top: 1px solid;
+    opacity: 1;
+    width: 100%;
 }
 
 .center-content {
@@ -87,7 +100,7 @@ h2 {
 }
 
 .content-container h1 {
-    @extend .header-font-family;
+    @extend .header-links-font-family;
     @extend .white-color;
     font-style: italic;
     font-size: 5em;
@@ -101,11 +114,7 @@ h2 {
 }
 
 /* Fonts and colors */
-.link-font-family {
-    font-family: amatic-sc, sans-serif !important;
-}
-
-.header-font-family {
+.header-links-font-family {
     font-family: cooper-black-std, serif !important;
 }
 
@@ -119,6 +128,13 @@ h2 {
     background-color: #F24405 !important;
 }
 
+.blue-background-opacity {
+    background-color: rgba(0, 47, 47, 0.55);
+}
+
+.white-background-opacity {
+    background-color: rgba(255, 255, 255, 0.85);
+}
 .blue-background {
     background-color: #002F2F !important;
 }

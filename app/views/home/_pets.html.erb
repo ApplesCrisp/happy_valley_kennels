@@ -1,0 +1,12 @@
+<% if @pets.any? %>
+  <div class="pet-box-wrapper row">
+  <% @pets.each do |pet| %>
+    <%= render pet %>
+  <% end %>
+  </div>
+<% else %>
+  <p>You have no friends</p>
+
+<% end %>
+  <%= link_to "New pet", new_pet_path %>
+<p>Pets</p>

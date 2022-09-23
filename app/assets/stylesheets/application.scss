@@ -10,8 +10,12 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+@import "font-awesome";
 @import url("https://use.typekit.net/axz2hml.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
 // App sections
 @import "application/common";
 @import "application/new_account";
@@ -21,6 +25,8 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "application/forms";
 @import "application/dashboard";
 @import "application/sign_in";
+@import "application/messages";
+@import "application/pets";
 
 // simple_form helpers
 @import "simple_form-bootstrap/simple_form-bootstrap";

@@ -1,40 +1,18 @@
-<div id="<%= dom_id pet %>">
-  <p>
-    <strong>Name:</strong>
-    <%= pet.name %>
-  </p>
-
-  <p>
-    <strong>Breed:</strong>
-    <%= pet.breed %>
-  </p>
-
-  <p>
-    <strong>Colors:</strong>
-    <%= pet.colors %>
-  </p>
-
-  <p>
-    <strong>Age:</strong>
-    <%= pet.age %>
-  </p>
-
-  <p>
-    <strong>Neutered spayed:</strong>
-    <%= pet.neutered_spayed %>
-  </p>
-
-  <p>
-    <strong>Sex:</strong>
-    <%= pet.sex %>
-  </p>
-
-  <p>
-    <strong>Vaccinated:</strong>
-    <%= pet.vaccinated %>
-  </p>
-
-  <%= image_tag(pet.pet_picture) %>
-  <%= pet.pictures %>
-
+<div id="<%= dom_id pet %>" class="pet-box col-lg-6 row">
+  <div class="col-lg-4 center-content">
+    <%= link_to edit_pet_path(pet), class: "update-profile" do %>
+      <%= image_tag "pet_profile.png", class: "pet-profile-default" %>
+    <% end %>
+  </div>
+  <div class="col-lg-8 pet-description">
+    <h1>
+      <%= pet.name %>
+    </h1>
+    <p>
+      <%= pet.sex.casecmp("M") == 0 ? "Male" : "Female" %> - <%= pet.breed %>
+    </p>
+    <p>
+      <%= pet.age %> years old
+    </p>
+  </div>
 </div>

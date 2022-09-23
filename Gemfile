@@ -47,6 +47,7 @@ gem 'rouge', '~> 3.26'
 gem 'simple_form', '~> 5.1'
 gem "mini_magick"
 gem "image_processing", ">= 1.2"
+gem "font-awesome-sass", "~> 6.1.2"
 
 group :test, :development do
   gem 'diffy'

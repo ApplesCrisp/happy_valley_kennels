@@ -1,0 +1,21 @@
+@import "./common.scss";
+
+.pet-box {
+    @extend .border-radius;
+    margin-left: 10px;
+}
+
+.pet-box-wrapper {
+    width: 100%;
+}
+
+.pet-profile-default {
+    max-width: 100%;
+    height: auto;
+}
+
+.pet-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+}

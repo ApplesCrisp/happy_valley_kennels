@@ -1,29 +1,21 @@
 <div id="dashboard-wrapper" class="row col-lg-11">
-  <div class="col-lg-3 profile">
-    <%= link_to edit_user_registration_path, class: "update-profile" do %>
-      <%= image_tag "empty-profile.png", class: "simple-logo rounded-circle img-thumbnail" %>
-      <p class="update-profile-msg">Update Profile</p>
-    <% end %>
-    <hr/>
-    <%= current_user.name %>
-  </div>
-  <div class="col-lg-9 center-content">
-    <div id="tabs">
+  <div class="col-lg-2 row profile-div">
+    <div class="profile-content">
+      <%= link_to edit_user_registration_path, class: "update-profile" do %>
+        <%= image_tag "empty_profile.png", class: "simple-logo rounded-circle img-thumbnail" %>
+        <p class="update-profile-msg">Update Profile</p>
+      <% end %>
+      <%= current_user.name %>
       <ul>
-        <li><a href="#Profile">Profile</a></li>
-        <li><a href="#Pets">Pets</a></li>
-        <li><a href="#Bookings">Bookings</a></li>
+        <li><%= link_to home_dashboard_path(partial: 'messages') do %><i class="fa-solid fa-clipboard"> Messages</i><% end %></li>
+        <li><%= link_to home_dashboard_path(partial: 'bookings') do %><i class="fa-solid fa-book-bookmark"> Bookings</i><% end %></li>
+        <li><%= link_to home_dashboard_path(partial: 'pets') do %><i class="fa-solid fa-bone"> Pets</i><% end %></li>
       </ul>
-      <div id="Profile">
-        <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
-      </div>
-      <div id="Pets">
-        <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
-      </div>
-      <div id="Bookings">
-        <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
-        <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
-      </div>
+    </div>
+  </div>
+  <div class="col-lg-10 center-content">
+    <div id="dashboard-content">
+      <%= render @partial_to_render %>
     </div>
   </div>
 </div>

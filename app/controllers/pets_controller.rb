@@ -22,7 +22,7 @@ class PetsController < ApplicationController
   # POST /pets or /pets.json
   def create
     @pet = Pet.new(pet_params)
-
+    @pet.owner_id = current_user.id
     respond_to do |format|
       if @pet.save
         format.html { redirect_to pet_url(@pet), notice: "Pet was successfully created." }
@@ -36,6 +36,7 @@ class PetsController < ApplicationController
 
   # PATCH/PUT /pets/1 or /pets/1.json
   def update
+    @pet.pet_picture.attach(params[:pet_picture])
     respond_to do |format|
       if @pet.update(pet_params)
         format.html { redirect_to pet_url(@pet), notice: "Pet was successfully updated." }
@@ -65,6 +66,6 @@ class PetsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def pet_params
-      params.require(:pet).permit(:name, :breed, :colors, :age, :neutered_spayed, :sex, :vaccinated, :pet_picture, pictures: [])
+      params.require(:pet).permit(:name, :breed, :colors, :age, :neutered_spayed, :sex, :vaccinated, :pet_picture, :owner_id)
     end
 end

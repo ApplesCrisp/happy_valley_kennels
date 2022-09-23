@@ -7,24 +7,28 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarhamburger">
     <div class="container-fluid col-lg-10">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link link-navbar" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link link-navbar" href="#">About Us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link link-navbar" href="#">Boarding</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link link-navbar" href="#">Daycare</a>
-      </li>
-    </ul>
+      <ul class="navbar-nav mr-auto">
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to 'Dashboard', home_dashboard_path, class: "nav-link link-navbar" %>
+          </li>
+        <% end %>
+        <li class="nav-item">
+          <%= link_to 'About', home_about_path, class: "nav-link link-navbar" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Boarding', home_boarding_path, class: "nav-link link-navbar" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Contact', home_contact_path, class: "nav-link link-navbar" %>
+        </li>
+      </ul>
     </div>
-    <div class="d-flex navbar-button col-lg-2">
+    <div class="d-flex navbar-button-div col-lg-2">
       <% if user_signed_in? %>
-        <%= link_to 'Logout', destroy_user_session_path, class: "btn btn-danger btn-sm", method: :delete %>
+        <%= link_to 'Logout', destroy_user_session_path, class: "btn btn-danger btn-sm navbar-button", method: :delete %>
+      <% else %>
+        <%= link_to "Sign In", user_session_path, class: "btn btn-success btn-sm navbar-button" %>
       <% end %>
     </div>
   </div>

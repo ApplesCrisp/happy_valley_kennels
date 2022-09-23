@@ -1,0 +1,46 @@
+@import "./common.scss";
+
+.warning-message-box {
+    @extend .message-box;
+    border: solid medium #F2DA5E;
+}
+
+.success-message-box {
+    @extend .message-box;
+    border: solid medium #157347;
+}
+
+.warning-message {
+    @extend .message;
+    @extend .warning-color; 
+}
+
+.success-message {
+    @extend .success-color;
+    @extend .message;
+}
+
+.warning-color {
+    @extend .blue-color;
+    background-color: #F2DA5E;
+}
+
+.success-color {
+    @extend .white-color;
+    background-color: #157347;
+}
+
+.message-box {
+    @extend .border-radius;
+    margin-bottom: 10px;
+}
+
+.message {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+.message-text {
+    margin: 0 15px;
+}

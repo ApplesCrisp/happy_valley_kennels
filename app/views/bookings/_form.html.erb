@@ -3,8 +3,11 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :pet_id %>
-    <%= f.input :owner_id %>
+    <%= f.collection_check_boxes :pet_ids, @pets, :id, :name, include_hidden: false do |b| %>
+      <%= b.label %>
+      <%= b.check_box checked: true  %>
+    <% end %>
+    <%= f.input :booking_type %>
     <%= f.input :booking_start_date %>
     <%= f.input :booking_end_date %>
   </div>

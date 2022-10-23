@@ -1,0 +1,22 @@
+@import "./common.scss";
+
+.booking-box {
+    border-bottom: thin dotted black;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.booking-box-wrapper {
+    width: 100%;
+}
+
+.booking-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+}
+
+.booking-description a {
+    font-size: 20px;
+    width: 150px;
+}

@@ -1,1 +1,10 @@
-<p>Bookings</p>
+<% if @bookings.any? %>
+  <div class="booking-box-wrapper row">
+    <% @bookings.each do |booking| %>
+      <%= render booking %>
+    <% end %>
+  </div>
+<% else %>
+  <p>You have no booking</p>
+<% end %>
+<%= link_to "New booking", new_booking_path, class: "link-forms blue-color float-right" %>

@@ -33,6 +33,7 @@
 .message-box {
     @extend .border-radius;
     margin-bottom: 10px;
+    box-shadow: 3px 3px 7px black;
 }
 
 .message {

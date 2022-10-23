@@ -57,6 +57,16 @@ ActiveRecord::Schema[7.0].define(version: 202208050247489) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "bookings", force: :cascade do |t|
+    t.string "pet_ids"
+    t.integer "owner_id"
+    t.string "booking_type"
+    t.date "booking_start_date"
+    t.date "booking_end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "pets", force: :cascade do |t|
     t.integer "owner_id"
     t.string "name"

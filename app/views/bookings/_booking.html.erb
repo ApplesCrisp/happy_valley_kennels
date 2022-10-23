@@ -1,22 +1,12 @@
-<div id="<%= dom_id booking %>">
-  <p>
-    <strong>Pet:</strong>
-    <%= booking.pet_id %>
-  </p>
+<div id="<%= dom_id booking %>" class="booking-box col-lg-12 row">
+  <div class="col-lg-8 booking-description">
+    <h1>
+      
+    </h1>
+    <%= link_to "Edit Booking", edit_booking_path(booking), class: "link-forms blue-color" %>
+    <p>
+      <%= booking.booking_start_date %> to <%= booking.booking_end_date %> 
+    </p>
 
-  <p>
-    <strong>Owner:</strong>
-    <%= booking.owner_id %>
-  </p>
-
-  <p>
-    <strong>Booking start date:</strong>
-    <%= booking.booking_start_date %>
-  </p>
-
-  <p>
-    <strong>Booking end date:</strong>
-    <%= booking.booking_end_date %>
-  </p>
-
+  </div>
 </div>

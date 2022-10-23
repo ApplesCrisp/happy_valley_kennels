@@ -89,7 +89,6 @@ a:link, a:visited, a:hover, a:active{
 
 .link-forms {
     @extend .link-common;
-    @extend .white-color;
     font-size: 2em;
     padding-bottom: 0px;
 }

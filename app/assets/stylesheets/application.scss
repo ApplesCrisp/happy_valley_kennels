@@ -27,6 +27,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "application/sign_in";
 @import "application/messages";
 @import "application/pets";
+@import "application/bookings";
 
 // simple_form helpers
 @import "simple_form-bootstrap/simple_form-bootstrap";

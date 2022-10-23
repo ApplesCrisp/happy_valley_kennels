@@ -1,8 +1,9 @@
 @import "./common.scss";
 
 .pet-box {
-    @extend .border-radius;
-    margin-left: 10px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    border-bottom: thin dotted black;
 }
 
 .pet-box-wrapper {
@@ -10,12 +11,22 @@
 }
 
 .pet-profile-default {
-    max-width: 100%;
-    height: auto;
+    max-width: 200px;
+    height: 200px;
 }
 
 .pet-description {
     display: flex;
     flex-direction: column;
-    justify-content: center;   
+    justify-content: center;
+}
+
+@media (max-width: 800px) {
+    .pet-description {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-content: center;
+        text-align: center;
+    }
 }

@@ -7,6 +7,7 @@ class HomeController < ApplicationController
   def dashboard
     @partial_to_render = params[:partial].nil? ? 'messages' : params[:partial]
     @pets = Pet.where(owner_id: current_user.id)
+    @bookings = Booking.where(owner_id: current_user.id)
   end
 
 end
